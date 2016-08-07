@@ -27,7 +27,6 @@ console.log(multi(5, 2, 3))
 let result = multi(5, 3, 6);
 
 console.log(result);
-*/
 
 
 let div = function(c, v) {
@@ -35,4 +34,32 @@ let div = function(c, v) {
 };
 
 console.log(div(2, 4));
+*/
+
+
+
+let game = function(d, v) {
+	return d + v
+}
+console.log(game(3, 4));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
