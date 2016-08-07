@@ -55,7 +55,11 @@ console.log(ham(5, 5))
 
 
 
-
+let lawnmower = function(w, k) {
+	console.log("called whiz khalifa")
+	return k - w
+};
+console.log(lawnmower(5, 4))
 
 
 
