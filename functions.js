@@ -34,7 +34,6 @@ let div = function(c, v) {
 };
 
 console.log(div(2, 4));
-*/
 
 
 
@@ -42,11 +41,14 @@ let game = function(d, v) {
 	return d + v
 }
 console.log(game(3, 4));
+*/
 
 
-
-
-
+let ham = function(p, m) {
+	console.log("called ham")
+	return p + m
+};
+console.log(ham(5, 5))
 
 
 
