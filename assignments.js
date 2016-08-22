@@ -6,25 +6,13 @@
 // Write a function that takes two strings and returns 
 // a new string which is the concatenation of both strings
 
-let sound = function(wave, barrier) {
-	let s = wave + barrier;
-	return s;
+let conjoin = function (twin1, twin2) {
+	let togethr = twin1 + twin2;
+	return togthr
 };
 
 
-let pork = function(bacon, ham) {
-let p = bacon + ham;
-return p;
-};
-
-
-
-
-
-
-
-
-let rem = {sleep: 'juice', awake: 'water'}
+let foo = {f1:'124', ggggg:568, uyuyi:[7, 9, 0]}
 
 
 // Task 2
@@ -32,60 +20,14 @@ let rem = {sleep: 'juice', awake: 'water'}
 // a JavaScript object with the fields foo, bar. Each field
 // can have any value
 
-
-
-let r = function() {
-	let f = {}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let glass = function() {
-	let state = {foo: 'solid', bar: 'liquid'};
-	return state
+let task = function() {
+	let obj = {foo:'elemenopee', bar:'queares'};
+	return obj;
 };
 
-let something = function() {
-	let anything = {foo: 'this', bar: 'that'};
-	return anything
-};
-
-let clothing = function() {
-	let garments = {foo: 'socks', bar: 'underwear'};
-	return garments
-};
-
-let space = function() {
-	let planet = {foo: 'star', bar: 'moon'};
-	return planet
-};
-
-let hamlet = function() { 
-	let madilene = {foo: 'gor', bar: 'eduard'};
-	return madilene
+let gout = function() {
+	let leg = {foo:'ouch', bar:'nogood'};
+	return leg
 };
 
 
@@ -95,9 +37,30 @@ let hamlet = function() {
 // you want, as long as the three field names use the three arguments
 // given to the function
 
+let azn = function(arg1, arg2, arg3) {
+	let beard = {fu:'arg1', man:'arg2', chu:'arg3'};
+	return beard
+};
+
+
+
+
+
 // Task 4
 // Write a function that takes an array of integers as
 // its argument and return the sum of the integers
+
+let launder = function(int1) { 
+	let ar += 0 {
+	for (let i=0; i < ar.length; i++) {
+		if (ar[i] === ar.length)
+			return ar[i]}
+	
+}
+
+
+
+
 
 // Task 5
 // Write a function that takes an array of strings and
