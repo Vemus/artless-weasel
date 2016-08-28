@@ -14,7 +14,10 @@ http.get({
 		body.push(chunk);
 })
 	request.on('end', function() {
-		console.log(body);
+		let total = Buffer.concat(body)
+		let asstring = total.toString()
+		console.log(asstring);
+	
 	})
 });
 
