@@ -2,11 +2,14 @@
 <html>
 <head>
 
+
     <meta charset='UTF-8'/>
     <title>Livingitup</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
@@ -19,25 +22,29 @@
 <script type='text/jsx'>
 
 
-class ViankasComponent extends Component {
-  render() {
-    return (
-        <h2>My name is {this.props.useruser='Vianka'. I like to play the {this.props.instrument}</h2>
+var ViankasComponent = React.createClass({
+  render(){
+    return(
+        <div>
+
+          <h3>{this.props.user}</h3>
+          <p>{this.props.children}</p>
+
+        </div>
         );
       }
-  };
+  });
 
 
 
-React.render(<ViankasComponent />, document.getElementById('content'));
+React.render(
+  
       <div>
-        <ViankasComponent user='Vianka' instrument='piano' />
-        <ViankasComponent user='Monique' instrument='cello' />
-        <ViankasComponent user='Lemus' instrument='accordion' />
-      </div>
+        <ViankasComponent user='Vianka'>This is a children attribute, Vianka is bombacious.</ViankasComponent>
+        <ViankasComponent user='Monique'>This is a children attribute, Monique is both Vianka's middle-name and dog.</ViankasComponent>
+      </div>,
       document.getElementById('content')
 );
-
 
 
   </script>
