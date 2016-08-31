@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	
+	<title>HolyMole</title>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<div id='container'></div>
+
+	<script type ='text/babel'>
+
+		var Comment = React.createClass ({
+
+			edit(){
+				alert('Editing comment')
+			},
+			remove(){
+				alert('Removing comment')
+			},
+			render() {
+				return(
+						<div className='commentContainer'>
+							<div className='commentText'>Text {this.props.children}</div>
+							<button className='button-primary'>Edit</button>
+							<button className='button-secondary'>Remove</button>
+						</div>
+					);
+			}
+		});
+
+
+
+
+
+
+
+		ReactDOM.render(
+			<Comment className='board'>Test</Comment>, document.getElementById('container')
+			);
+
+	</script>
+
+</body>
+</html
