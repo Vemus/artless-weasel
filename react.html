@@ -23,25 +23,29 @@
 
 
 var ViankasComponent = React.createClass({
-  render(){
-    return(
-        <div>
+    doSomething: function() {
+      alert('You wanted to know more: ' + this.props.children);
+    },
+    render(){
+      return(
+          <div>
 
-          <h3>{this.props.user}</h3>
-          <p>{this.props.children}</p>
+            <h3>{this.props.user}</h3>
+            <a onClick={this.doSomething} href='#' >Click here</a>
 
-        </div>
-        );
-      }
-  });
+          </div>
+          );
+        }
+     });
 
 
 
 React.render(
   
       <div>
-        <ViankasComponent user='Vianka'>This is a children attribute, Vianka is bombacious.</ViankasComponent>
-        <ViankasComponent user='Monique'>This is a children attribute, Monique is both Vianka's middle-name and dog.</ViankasComponent>
+        <ViankasComponent user='Vianka'>Vianka is bombacious.</ViankasComponent>
+        <ViankasComponent user='Monique'>Monique is Vianka's dog.</ViankasComponent>
+         <ViankasComponent user='Primo'>Monique is Primo's cousin.</ViankasComponent>
       </div>,
       document.getElementById('content')
 );
