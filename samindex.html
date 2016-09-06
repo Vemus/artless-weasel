@@ -45,9 +45,96 @@ var Hi = React.createClass ({
   }
 });
 
+/*
+var Parent = React.createClass ({
+  getInitialState() {
+    return {
+      name: 'Vemus',
+      friends: ['Sophez', 'Aleda', 'Danires', 'Dainos']
+    }
+  },
+  render() {
+    return (
+    <div>
+    <h3> Name: {this.state.name} </h3>
+    <ShowList names={this.state.friends} />
+    </div>
+    )
+  }
+});
+*/
+
+var ShowList = React.createClass ({
+  render() {
+    var listItems = this.props.names.map(function(friend){
+      return <li> {friend} </li>;
+      });
+      return (
+      <div> 
+      <h3> Friends </h3>
+      <ul>
+        {listItems}
+      </ul>
+      </div>
+      )
+    }
+});
+
+var Parent2 = React.createClass({
+  getInitialState: function(){
+    return {
+      name: 'victorious V',
+      friends: ['Sophez', 'Aleda', 'Danires', 'Dainos']
+    }
+  },
+  addFriend: function(friend){
+    this.setState({
+      friends: this.state.friends.concat([friend])
+    });
+  },
+  render(){
+    return (
+    <div>
+      <h3> Name: {this.state.name} </h3>
+      <addFriend addNew={this.addFriend} />
+      <ShowList names={this.state.friends} />
+    </div>
+    )
+  }
+});
+var AddFriend = React.createClass ({
+  getInitialState(){
+    return{
+      newFriend: ''
+    }
+  },
+  updateNewFriend: function(e){
+    this.setState({
+      newFriend: e.target.value
+    });
+  },
+  handleAddNew: function(){
+    this.props.addNew(this.state.newFriend);
+    this.setState({
+      newFriend:''
+    });
+  },
+  render(){
+    return(
+    <div>
+      <input type='text' value={this.state.newFriend} onChange= {this.updateNewFriend} />
+      <button onClick={this.handleAddNew}> Add Friend </button>
+      </div>
+    );
+  }
+});
+
 ReactDOM.render(
   <div>
     <Hi name='Vi' />
+    
+    <Parent2 />
+    <AddFriend />
     <HelloUser />
   </div>,
   document.getElementById('content')
