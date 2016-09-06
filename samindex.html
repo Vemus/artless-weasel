@@ -21,7 +21,7 @@ var HelloUser = React.createClass({
     }
   },
 
-    handleChange: function(e){
+     handleChange: function(e){
       this.setState({
         username: e.target.value
       });
@@ -37,8 +37,17 @@ var HelloUser = React.createClass({
   }
 });
 
+var Hi = React.createClass ({
+  render() {
+  return (
+  <div> Hello, {this.props.name} </div>
+    )
+  }
+});
+
 ReactDOM.render(
   <div>
+    <Hi name='Vi' />
     <HelloUser />
   </div>,
   document.getElementById('content')
