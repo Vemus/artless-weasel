@@ -1,0 +1,21 @@
+
+
+var rootElement = 
+	React.createElement('div', {},
+		React.createElement('h1', {}, "Contacts"),
+		React.createElement('ul', {},
+			React.createElement('li', {},
+				React.createElement('h2', {}, "James Nelson"),
+				React.createElement('a', {href: 'mailto:vianka.lemus@gmail.com'}, 'vianka.lemus@gmail.com')
+			),
+			React.createElement('li', {},
+				React.createElement('h2', {}, "Juanita Dos"),
+				React.createElement('a', {href:'mailto:made@up.com'}, 'made@up.com')
+			)
+		)
+	)
+
+ReactDom.render(
+	<rootElement />,
+	document.getElementById('react-app')
+)
