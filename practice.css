@@ -1,0 +1,23 @@
+
+.box{
+	display: inline-block;
+	background: black;
+	width: 100px;
+	height: 300px;
+
+	margin: 20px;
+	color: white;
+}
+
+#one {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+}
+
+.outer {
+	width: 500px;
+	height: 300px;
+	overflow: scroll;
+	padding-left: 150px;
+}
