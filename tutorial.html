@@ -30,11 +30,58 @@ var rootElement =
 		)
 	)
 
+
+var contacts = [
+	{key: 1, name: 'Vianka Lemus', email: 'vianka.lemus@gmail.com'},
+	{key: 2, name: 'Vee'}
+	]
+
+var listElements = contacts
+		.filter(function(contact) {return contact.email; })
+		.map(function(contact) {
+			return React.createElement('li', {key: contact.key},
+				React.createElement('h2', {}, contact.name),
+				React.createElement('a', {href: 'mailto'+contact.email}, contact.email)
+			)
+		})
+
+var rootElement = 
+	React.createElement('div', {},
+	React.createElement('h1', {}, 'Contacts'),
+	React.createElement('ul', {}, listElements)
+	)
+
+
+var ContactItem = React.createClass({
+	propTypes: {
+		name: React.PropTypes.string.isRequired,
+	},
+	render(){
+		return(
+			React.createElement('li', {className:'Contact'},
+			React.createElement('h2',{className:'Contact-name'}, this.props.name)
+			)
+		)
+	},
+});
+
 ReactDOM.render (
-	rootElement, document.getElementById('react-app')
+	
+rootElement,
+	ContactItem,
+	 
+	document.getElementById('react-app')
 )
 
 </script>
+
+
+
+<!-- createElement takes (1. string/ReactClass type, 2. [object props], 3. [children])
+1. type of HTML element to use, can also use custom elements
+2. specify which attributes are defined on HTML element
+3. takes strings or objects (or arrays of the same); returns element's content
+ -->
 
 </body>
 </html> 
