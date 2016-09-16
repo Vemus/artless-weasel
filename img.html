@@ -4,17 +4,43 @@
 
 		<link rel='stylesheet' type='text/css' href='./practice.css'>
 		<meta charset='utf-8'>
-		<title>Ethnobotanical Map</title>
+		<title>Ethnobotanical Map of Armenia</title>
+
+	<script src='./static/react.js'></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+
+    <script src="./static/react-dom.js"></script>
 
 	</head>
 	<body>
 
-	<img src='../graphics/marker.png' alt='' style='' >
-	<img src='../graphics/map-marker.png' alt='' style='' >
-	<img src='../graphics/armenia-topo.jpg' alt='' style='' >
+<div id='container'>
+	<div id='header'></div>
+	<div id='content'>
 
+	<div id='point'><img src='../graphics/marker.png' alt=''  ></div>
+	<div id='point2'><img src='../graphics/marker.png' alt=''  ></div>
+	<div id='point3'><img src='../graphics/marker.png' alt=''  ></div>
 
+	<div id='example'></div>
 	</div>
+<!--	<img src='../graphics/map-marker.png' alt='' style='' > -->
+	
 
+		
+	<div id='sidebar'></div>
+		<div id='links'></div>
+</div>
+
+<script type='text/babel'>
+
+	ReactDOM.render(<h3>This Plant</h3>, document.getElementById('example'))
+;
+</script>
 	</body>
 </html>

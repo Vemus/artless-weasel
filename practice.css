@@ -1,23 +1,30 @@
 
-.box{
-	display: inline-block;
-	background: black;
-	width: 100px;
-	height: 200px;
-
-	margin: 20px;
-	color: white;
+#container {
+	background-color: 
 }
 
-#one {
-	position: fixed;
-	top: 30px;
-	left: 10px;
+#content {
+	background-color: #FFFFFF ;
+	background-image: url('../graphics/armenian-topo.jpg');
+	background-size: 1000px;
+	background-repeat: no-repeat;
+	height: 1000px
 }
 
-.outer {
-	width: 500px;
-	height: 300px;
-	overflow: scroll;
-	padding-left: 150px;
+
+#point {
+	position: absolute;
+	left: 202px;
+	top: 212px;
+}
+
+#point2 {
+	position: absolute;
+	left: 337px;
+	top: 206px;
+}
+#point3 {
+	position: absolute;
+	left: 341px;
+	top: 381px;
 }
